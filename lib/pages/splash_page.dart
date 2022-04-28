@@ -9,7 +9,7 @@ class SplashPage extends StatefulWidget{
 }
 
 class _SplashPageState extends State<SplashPage>{
-  static const int timeDelay=500;
+  static const int timeDelay=3000;
   @override
   void initState() {
     super.initState();

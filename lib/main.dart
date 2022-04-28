@@ -18,7 +18,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StoreProvider(store: store, child: MaterialApp(
-        home:  SplashPage()));
+        home:  SplashPage(),
+        theme: ThemeData(
+            colorScheme:  Theme.of(context).colorScheme.copyWith
+              (secondary: Colors.amberAccent,
+              primary: Colors.deepOrange
+            )
+    )));
   }
 }
 
