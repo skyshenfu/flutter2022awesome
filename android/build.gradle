@@ -9,9 +9,6 @@ buildscript {
     }
 
     dependencies {
-        google { url 'https://maven.aliyun.com/repository/google' }
-        jcenter { url 'https://maven.aliyun.com/repository/jcenter' }
-        mavenCentral { url 'https://maven.aliyun.com/repository/central' }
         classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -19,6 +16,9 @@ buildscript {
 
 allprojects {
     repositories {
+        google { url 'https://maven.aliyun.com/repository/google' }
+        jcenter { url 'https://maven.aliyun.com/repository/jcenter' }
+        mavenCentral { url 'https://maven.aliyun.com/repository/central' }
         google()
         mavenCentral()
     }
