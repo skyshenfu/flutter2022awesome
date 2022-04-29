@@ -7,15 +7,14 @@ class CommonLayout extends StatelessWidget{
   const CommonLayout({Key? key,required this.backgroundColor,required this.safeAreaColor,required this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: safeAreaColor,
-      child: SafeArea(
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      body: SafeArea(
         bottom: false,
         child: Container(
-          color: backgroundColor,
           child: child
         ),
-      ),
+      )
     );
   }
 

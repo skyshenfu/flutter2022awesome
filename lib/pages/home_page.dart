@@ -7,6 +7,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
 import 'demo_list_page1.dart';
+import 'form_page1.dart';
 
 class MyHomePage extends StatefulWidget {
   // This widget is the home page of your application. It is stateful, meaning
@@ -64,6 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   TextButton(onPressed: _jumpTolayoutPage, child: const Text("跳转到布局页面1")),
                   TextButton(onPressed: _jumpToListPage, child: const Text("跳转到列表页面1")),
+                  TextButton(onPressed: _jumpToInputPage, child: const Text("跳转到表单👴")),
+
                   const Text(
                     'You have pushed the button this many times:',
                     style: TextStyle(color: Color(0xfff96060)),
@@ -96,6 +99,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void _jumpToListPage() {
     Navigator.push(context,  MaterialPageRoute(builder: (context){
       return  DemoListPage1();
+    }));
+  }
+
+  void _jumpToInputPage() {
+    Navigator.push(context,  MaterialPageRoute(builder: (context){
+      return  FormPage1();
     }));
   }
 }
