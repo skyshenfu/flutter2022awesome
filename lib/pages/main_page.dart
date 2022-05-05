@@ -3,6 +3,8 @@ import 'package:flutter2022awesome/pages/class_tab_page.dart';
 import 'package:flutter2022awesome/pages/mine_tab_page.dart';
 import 'package:flutter2022awesome/pages/study_tab_page.dart';
 
+import '../utils/OverScrollBehavior.dart';
+
 class MainPage extends StatefulWidget{
   const MainPage({Key? key}) : super(key: key);
 
@@ -34,11 +36,15 @@ class _MainPageState extends State<MainPage>{
     return Scaffold(
         body: SafeArea(
           bottom: false,
-          child: PageView(
-          controller: _pageController,
-          children: pages,
-          onPageChanged: _pageChangeMethod,
-        ),
+          child:   ScrollConfiguration(
+            behavior: OverScrollBehavior(),
+            child: PageView(
+            controller: _pageController,
+            children: pages,
+            onPageChanged: _pageChangeMethod,
+          ),
+          )
+         ,
     ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
