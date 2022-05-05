@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter2022awesome/pages/home_page.dart';
+import 'main_page.dart';
 
 class SplashPage extends StatefulWidget{
+  const SplashPage({Key? key}) : super(key: key);
+
   @override
   _SplashPageState createState() =>_SplashPageState();
 }
@@ -32,7 +34,7 @@ class _SplashPageState extends State<SplashPage>{
 
   FutureOr _jumpToMainPage() {
     Navigator.pushReplacement(context,  MaterialPageRoute(builder: (context){
-      return  MyHomePage();
+      return  MainPage();
     }));
   }
 }
