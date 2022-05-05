@@ -95,3 +95,5 @@ flutter:
 
   assets:
     - assets/image/
+    - assets/image/tabicon/
+    - assets/image/splash/

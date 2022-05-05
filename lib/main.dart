@@ -21,9 +21,15 @@ class MyApp extends StatelessWidget {
         home:  SplashPage(),
         theme: ThemeData(
             colorScheme:  Theme.of(context).colorScheme.copyWith
-              (secondary: Colors.amberAccent,
-              primary: Colors.deepOrange
-            )
+              (
+                //主颜色
+                primary: Colors.deepOrange,
+              //次颜色
+              secondary: Colors.amberAccent,
+            ),
+            //去除水波纹效果的俩颜色
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent
     )));
   }
 }

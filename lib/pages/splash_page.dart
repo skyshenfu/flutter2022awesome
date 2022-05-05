@@ -24,7 +24,7 @@ class _SplashPageState extends State<SplashPage>{
       backgroundColor: Colors.white,
       body:  SafeArea(
           child: Center(
-          child: Image.asset("assets/image/splash_bg.png"),
+          child: Image.asset("assets/image/splash/launcher_default.png")
         ),
       ),
     );

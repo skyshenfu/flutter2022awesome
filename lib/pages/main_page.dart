@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter2022awesome/pages/home_page.dart';
+import 'package:flutter2022awesome/pages/class_tab_page.dart';
+import 'package:flutter2022awesome/pages/mine_tab_page.dart';
+import 'package:flutter2022awesome/pages/study_tab_page.dart';
 
 class MainPage extends StatefulWidget{
   const MainPage({Key? key}) : super(key: key);
@@ -13,9 +15,9 @@ class MainPage extends StatefulWidget{
 
 class _MainPageState extends State<MainPage>{
   final pages = <Widget>[
-    MyHomePage(),
-    MyHomePage(),
-    MyHomePage()
+    ClassTabPage(),
+    StudyTabPage(),
+    MineTabPage()
   ];
 
   int ? _tabIndex;
@@ -40,9 +42,13 @@ class _MainPageState extends State<MainPage>{
     ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.adb), label: ("tab1")),
-          BottomNavigationBarItem(icon: Icon(Icons.add_a_photo), label: ("tab2")),
-          BottomNavigationBarItem(icon: Icon(Icons.description), label: ("tab3"))
+          BottomNavigationBarItem(icon: Image(image: AssetImage("assets/image/tabicon/home_tab_class_n.png"),width: 50,height: 50), label: (""),activeIcon:
+          Image(image: AssetImage("assets/image/tabicon/home_tab_class_s.png"),width: 50,height: 50)),
+          BottomNavigationBarItem(icon: Image(image: AssetImage("assets/image/tabicon/home_tab_study_n.png"),width: 50,height: 50), label: (""),activeIcon:
+          Image(image: AssetImage("assets/image/tabicon/home_tab_study_s.png"),width: 50,height: 50)),
+          BottomNavigationBarItem(icon: Image(image: AssetImage("assets/image/tabicon/home_tab_me_n.png"),width: 50,height: 50), label: (""),activeIcon:
+          Image(image: AssetImage("assets/image/tabicon/home_tab_me_s.png"),width: 50,height: 50)
+          )
         ],
         onTap: _tapTab,
         fixedColor: Colors.lightBlue,
