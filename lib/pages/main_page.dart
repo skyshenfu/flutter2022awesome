@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter2022awesome/bloc/snack/snack_bloc.dart';
 import 'package:flutter2022awesome/pages/class_tab_page.dart';
 import 'package:flutter2022awesome/pages/mine_tab_page.dart';
 import 'package:flutter2022awesome/pages/study_tab_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../utils/OverScrollBehavior.dart';
 
@@ -13,8 +15,12 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  final pages = <Widget>[ClassTabPage(), StudyTabPage(), MineTabPage()];
+  final pages = <Widget>[ClassTabPage(), StudyTabPage(),
+    BlocProvider(create:(context)=>SnackBloc(),
+      child: MineTabPage()
+    )
 
+  ];
   int? _tabIndex;
   PageController? _pageController;
   @override
