@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter2022awesome/pages/IWPage.dart';
 import 'package:get/get.dart';
 
 import '../getx/study/logic.dart';
@@ -26,7 +27,14 @@ class StudyChildPage extends StatelessWidget {
           ),
           GetBuilder<StudyLogic>(builder: (logic){
             return Text("${state.mcNumber}");
-          })
+          }),
+          TextButton(onPressed: (){
+            Navigator.push(context,  MaterialPageRoute(builder: (context){
+              return  IWPage();
+            }));
+          }, child: const Text(
+            "进入InheritWidgetDemo"
+          ))
         ],
       )
     );
